@@ -113,6 +113,8 @@ public class Main extends javax.swing.JFrame {
         jScrollPane8 = new javax.swing.JScrollPane();
         areaelim1 = new javax.swing.JTextArea();
         jLabel26 = new javax.swing.JLabel();
+        indelimH = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
@@ -862,6 +864,19 @@ public class Main extends javax.swing.JFrame {
         jLabel26.setForeground(new java.awt.Color(0, 102, 102));
         jLabel26.setText("INDICE A ELIMINAR");
 
+        indelimH.setBackground(new java.awt.Color(0, 102, 102));
+        indelimH.setForeground(new java.awt.Color(255, 255, 255));
+
+        jButton6.setBackground(new java.awt.Color(255, 0, 0));
+        jButton6.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("ELIMINAR");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
@@ -873,8 +888,14 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(262, 262, 262)
-                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGap(0, 87, Short.MAX_VALUE)
+                                .addComponent(indelimH, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(272, 272, 272)
+                                .addComponent(jButton6)))))
+                .addGap(22, 22, 22))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -883,7 +904,15 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(indelimH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addComponent(jButton6)
+                        .addGap(18, 18, 18))))
         );
 
         jTabbedPane4.addTab("Eliminar", jPanel17);
@@ -1073,6 +1102,7 @@ public class Main extends javax.swing.JFrame {
         }
         
         areamods1.setText(fin);
+        areaelim1.setText(fin);
         
     }//GEN-LAST:event_jTabbedPane4MouseClicked
 
@@ -1103,6 +1133,21 @@ public class Main extends javax.swing.JFrame {
        
        
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        int indaelimH = Integer.parseInt(indelimH.getText());
+        for (Escuadron squad : squads) {
+            for (Persona integrante : squad.getIntegrantes()) {
+                if (integrante.equals(heroes.get(indaelimH))) {
+                    squad.getIntegrantes().remove(integrante);
+                }
+            }
+        }
+        heroes.remove(indaelimH);
+        
+        
+    }//GEN-LAST:event_jButton6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1168,6 +1213,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField ename;
     private javax.swing.JTextField etype;
     private javax.swing.JTextField indelim;
+    private javax.swing.JTextField indelimH;
     private javax.swing.JTextField indmodS;
     private javax.swing.JTextField indmodS1;
     private javax.swing.JTextField indsquadH;
@@ -1177,6 +1223,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
