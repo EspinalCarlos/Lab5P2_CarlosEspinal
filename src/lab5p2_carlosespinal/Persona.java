@@ -83,7 +83,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Nombre" + Name + ", Poder:" + Power;
+        return "Nombre: " + Name + ", Poder:" + Power;
     }
     
     

@@ -80,10 +80,18 @@ public class Main extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        listheroeadd = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
+        indsquadH = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        listaheroes = new javax.swing.JTextArea();
+        jButton4 = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        areamods1 = new javax.swing.JTextArea();
         jPanel17 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -422,6 +430,12 @@ public class Main extends javax.swing.JFrame {
         jPanel13.setBackground(new java.awt.Color(0, 153, 153));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTabbedPane4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane4MouseClicked(evt);
+            }
+        });
+
         jPanel14.setBackground(new java.awt.Color(204, 255, 255));
 
         NameH.setBackground(new java.awt.Color(0, 204, 204));
@@ -466,11 +480,12 @@ public class Main extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(0, 51, 51));
         jLabel15.setText("Agilidad Mental");
 
-        jTextArea1.setBackground(new java.awt.Color(0, 102, 102));
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(0, 255, 255));
-        jTextArea1.setRows(5);
-        jScrollPane5.setViewportView(jTextArea1);
+        listheroeadd.setBackground(new java.awt.Color(0, 102, 102));
+        listheroeadd.setColumns(20);
+        listheroeadd.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        listheroeadd.setForeground(new java.awt.Color(0, 255, 255));
+        listheroeadd.setRows(5);
+        jScrollPane5.setViewportView(listheroeadd);
 
         jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -482,11 +497,27 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        indsquadH.setBackground(new java.awt.Color(0, 204, 204));
+        indsquadH.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        indsquadH.setForeground(new java.awt.Color(0, 51, 51));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel16.setText("Indice de Squad");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel17.setText("Heroes");
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(22, 22, 22))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
@@ -516,14 +547,17 @@ public class Main extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AMH, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AMH, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel14Layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel16)
+                        .addGap(34, 34, 34)
+                        .addComponent(indsquadH, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(22, 22, 22))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -555,37 +589,91 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AMH, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(indsquadH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(19, 19, 19))
         );
 
         jTabbedPane4.addTab("Agregar", jPanel14);
 
+        jPanel15.setBackground(new java.awt.Color(204, 255, 255));
+
+        listaheroes.setBackground(new java.awt.Color(102, 255, 255));
+        listaheroes.setColumns(20);
+        listaheroes.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        listaheroes.setForeground(new java.awt.Color(0, 51, 51));
+        listaheroes.setRows(5);
+        jScrollPane6.setViewportView(listaheroes);
+
+        jButton4.setBackground(new java.awt.Color(0, 204, 204));
+        jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 51, 51));
+        jButton4.setText("LISTAR");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(326, 326, 326)
+                        .addComponent(jButton4)))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jButton4)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Listar", jPanel15);
+
+        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+
+        areamods1.setEditable(false);
+        areamods1.setBackground(new java.awt.Color(102, 255, 255));
+        areamods1.setColumns(20);
+        areamods1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        areamods1.setForeground(new java.awt.Color(0, 51, 51));
+        areamods1.setRows(5);
+        jScrollPane7.setViewportView(areamods1);
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(560, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Modificar", jPanel16);
@@ -746,8 +834,50 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
+       String Hname = NameH.getText();
+       String Hweak = WeakH.getText();
+       String HPower = poderH.getText();
+       int HAF = Integer.parseInt(AFH.getText());
+       int HAM = Integer.parseInt(AMH.getText());
+       int Hfuerza = Integer.parseInt(FuerzaH.getText());
+       int Hindsquad = Integer.parseInt(indsquadH.getText());
+       
+       Persona h = new Persona(Hname, HPower, Hweak, squads.get(Hindsquad), Hfuerza, HAF, HAM);
+       squads.get(Hindsquad).getIntegrantes().add(h);
+       heroes.add(h);
+       
+       
+       String fin = "";
+       for (Persona he : heroes) {
+            fin += heroes.indexOf(he)+"- "+he.toString();
+            fin += "\n";
+       }
+       listheroeadd.setText(fin);
+       
         
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        String fin = "";
+       for (Persona he : heroes) {
+            fin += heroes.indexOf(he)+"- "+he.toString();
+            fin += "\n";
+       }
+       listheroeadd.setText(fin);
+       listaheroes.setText(fin);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jTabbedPane4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane4MouseClicked
+        // TODO add your handling code here:
+        String fin = "";
+        for (Persona squad : heroes) {
+            fin+= heroes.indexOf(squad)+"- "+squad.toString();
+        }
+        
+        areamods1.setText(fin);
+        
+    }//GEN-LAST:event_jTabbedPane4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -800,6 +930,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextArea areaelim;
     private javax.swing.JTextArea arealistsquad;
     private javax.swing.JTextArea areamods;
+    private javax.swing.JTextArea areamods1;
     private javax.swing.JTextArea areasquad1;
     private javax.swing.JButton createsquad;
     private javax.swing.JTextField elocation;
@@ -807,9 +938,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField etype;
     private javax.swing.JTextField indelim;
     private javax.swing.JTextField indmodS;
+    private javax.swing.JTextField indsquadH;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -817,6 +950,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -845,10 +980,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea listaheroes;
+    private javax.swing.JTextArea listheroeadd;
     private javax.swing.JButton listsquads;
     private javax.swing.JTextField newlocationS;
     private javax.swing.JTextField newnameS;
