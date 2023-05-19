@@ -92,6 +92,23 @@ public class Main extends javax.swing.JFrame {
         jPanel16 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         areamods1 = new javax.swing.JTextArea();
+        jLabel18 = new javax.swing.JLabel();
+        poderH1 = new javax.swing.JTextField();
+        NameH1 = new javax.swing.JTextField();
+        WeakH1 = new javax.swing.JTextField();
+        FuerzaH1 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        AMH1 = new javax.swing.JTextField();
+        AFH1 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        indsquadH1 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        indmodS1 = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -659,21 +676,171 @@ public class Main extends javax.swing.JFrame {
         areamods1.setRows(5);
         jScrollPane7.setViewportView(areamods1);
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel18.setText("Fuerza");
+
+        poderH1.setBackground(new java.awt.Color(0, 204, 204));
+        poderH1.setForeground(new java.awt.Color(255, 255, 255));
+
+        NameH1.setBackground(new java.awt.Color(0, 204, 204));
+        NameH1.setForeground(new java.awt.Color(255, 255, 255));
+
+        WeakH1.setBackground(new java.awt.Color(0, 204, 204));
+        WeakH1.setForeground(new java.awt.Color(255, 255, 255));
+
+        FuerzaH1.setBackground(new java.awt.Color(0, 204, 204));
+        FuerzaH1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel19.setText("Agilidad Mental");
+
+        AMH1.setBackground(new java.awt.Color(0, 204, 204));
+        AMH1.setForeground(new java.awt.Color(255, 255, 255));
+
+        AFH1.setBackground(new java.awt.Color(0, 204, 204));
+        AFH1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel20.setText("Nombre");
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel21.setText("Debilidad");
+
+        indsquadH1.setBackground(new java.awt.Color(0, 204, 204));
+        indsquadH1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        indsquadH1.setForeground(new java.awt.Color(0, 51, 51));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel22.setText("Indice de Squad");
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel23.setText("Agilidad Fisica");
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel24.setText("Poder");
+
+        indmodS1.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel25.setText("Indice de Heroe");
+
+        jButton5.setBackground(new java.awt.Color(0, 204, 204));
+        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 51, 51));
+        jButton5.setText("MODIFICAR");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(560, Short.MAX_VALUE))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(indmodS1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(FuerzaH1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(poderH1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(WeakH1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(NameH1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AFH1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AMH1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                .addGap(66, 66, 66)
+                                .addComponent(jLabel22)
+                                .addGap(34, 34, 34)
+                                .addComponent(indsquadH1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(89, 89, 89))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(14, 14, 14))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NameH1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(WeakH1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AFH1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(poderH1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(FuerzaH1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AMH1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(indsquadH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(indmodS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(14, 14, 14))
         );
 
         jTabbedPane4.addTab("Modificar", jPanel16);
@@ -879,6 +1046,34 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jTabbedPane4MouseClicked
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+       String Hname = NameH1.getText();
+       String Hweak = WeakH1.getText();
+       String HPower = poderH1.getText();
+       int HAF = Integer.parseInt(AFH1.getText());
+       int HAM = Integer.parseInt(AMH1.getText());
+       int Hfuerza = Integer.parseInt(FuerzaH1.getText());
+       int Hindsquad = Integer.parseInt(indsquadH1.getText());
+       int indamod = Integer.parseInt(indmodS1.getText());
+       
+       heroes.get(indamod).setName(Hname);
+       heroes.get(indamod).setWeakness(Hweak);
+       heroes.get(indamod).setPower(HPower);
+       heroes.get(indamod).setAgilidadFisica(HAF);
+       heroes.get(indamod).setAgilidadMental(HAM);
+       heroes.get(indamod).setFuerza(Hfuerza);
+       heroes.get(indamod).setTag(squads.get(Hindsquad));
+       
+        String fin = "";
+        for (Persona squad : heroes) {
+            fin+= squads.indexOf(squad)+"- "+squad.toString();
+        }
+        areamods1.setText(fin);
+       
+       
+    }//GEN-LAST:event_jButton5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -923,10 +1118,15 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AFH;
+    private javax.swing.JTextField AFH1;
     private javax.swing.JTextField AMH;
+    private javax.swing.JTextField AMH1;
     private javax.swing.JTextField FuerzaH;
+    private javax.swing.JTextField FuerzaH1;
     private javax.swing.JTextField NameH;
+    private javax.swing.JTextField NameH1;
     private javax.swing.JTextField WeakH;
+    private javax.swing.JTextField WeakH1;
     private javax.swing.JTextArea areaelim;
     private javax.swing.JTextArea arealistsquad;
     private javax.swing.JTextArea areamods;
@@ -938,11 +1138,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField etype;
     private javax.swing.JTextField indelim;
     private javax.swing.JTextField indmodS;
+    private javax.swing.JTextField indmodS1;
     private javax.swing.JTextField indsquadH;
+    private javax.swing.JTextField indsquadH1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -952,7 +1155,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -992,6 +1203,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField newnameS;
     private javax.swing.JTextField newtypeS;
     private javax.swing.JTextField poderH;
+    private javax.swing.JTextField poderH1;
     private javax.swing.JTabbedPane villian;
     // End of variables declaration//GEN-END:variables
 }
