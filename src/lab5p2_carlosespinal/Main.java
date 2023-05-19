@@ -1071,7 +1071,9 @@ public class Main extends javax.swing.JFrame {
        Persona h = new Persona(Hname, HPower, Hweak, squads.get(Hindsquad), Hfuerza, HAF, HAM);
        squads.get(Hindsquad).getIntegrantes().add(h);
        heroes.add(h);
-       
+        if (squads.get(Hindsquad).getIntegrantes().isEmpty()) {
+            squads.get(Hindsquad).setLeader(h);
+        }
        
        String fin = "";
        for (Persona he : heroes) {

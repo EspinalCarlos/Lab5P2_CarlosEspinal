@@ -55,6 +55,15 @@ public class Escuadron {
         this.Integrantes = Integrantes;
     }
 
+    public Persona getLeader() {
+        return Leader;
+    }
+
+    public void setLeader(Persona Leader) {
+        this.Leader = Leader;
+    }
+    
+
     
     @Override
     public String toString() {
