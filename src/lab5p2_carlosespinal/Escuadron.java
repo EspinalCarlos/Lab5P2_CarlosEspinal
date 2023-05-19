@@ -58,7 +58,7 @@ public class Escuadron {
     
     @Override
     public String toString() {
-        return "Squad Name: " + SName + "\nLocalidad: " + Localidad + "\nTipo de Escuadron: " + HV;
+        return "Squad Name: " + SName + "\nLocalidad: " + Localidad + "\nTipo de Escuadron: " + HV + "------------";
     }
 
     
