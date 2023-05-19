@@ -60,7 +60,10 @@ public class Main extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        areamods2 = new javax.swing.JTextArea();
+        areaelim = new javax.swing.JTextArea();
+        indelim = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel14 = new javax.swing.JPanel();
@@ -334,28 +337,63 @@ public class Main extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(102, 102, 102));
 
-        areamods2.setEditable(false);
-        areamods2.setBackground(new java.awt.Color(0, 0, 0));
-        areamods2.setColumns(20);
-        areamods2.setForeground(new java.awt.Color(0, 255, 51));
-        areamods2.setRows(5);
-        jScrollPane4.setViewportView(areamods2);
+        areaelim.setEditable(false);
+        areaelim.setBackground(new java.awt.Color(0, 0, 0));
+        areaelim.setColumns(20);
+        areaelim.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        areaelim.setForeground(new java.awt.Color(0, 255, 51));
+        areaelim.setRows(5);
+        jScrollPane4.setViewportView(areaelim);
+
+        jButton2.setBackground(new java.awt.Color(255, 51, 51));
+        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("ELIMINAR");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("INDICE A ELIMINAR");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(337, 337, 337)
+                        .addComponent(indelim, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(32, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(311, 311, 311))))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel9)
+                .addGap(7, 7, 7)
+                .addComponent(indelim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addContainerGap())
         );
 
         jTabbedPane2.addTab("Eliminar", jPanel8);
@@ -522,7 +560,8 @@ public class Main extends javax.swing.JFrame {
             fin+= squads.indexOf(squad)+"- "+squad.toString();
         }
         areamods.setText(fin);
-        areamods2.setText(fin);
+        areaelim.setText(fin);
+        areasquad1.setText(fin);
         
     }//GEN-LAST:event_jTabbedPane2MouseClicked
 
@@ -546,6 +585,17 @@ public class Main extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        squads.remove(Integer.parseInt(indelim.getText()));
+        String fin = "";
+        for (Escuadron squad : squads) {
+            fin+= squads.indexOf(squad)+"- "+squad.toString();
+        }
+        areaelim.setText(fin);
+        
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -590,16 +640,18 @@ public class Main extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea areaelim;
     private javax.swing.JTextArea arealistsquad;
     private javax.swing.JTextArea areamods;
-    private javax.swing.JTextArea areamods2;
     private javax.swing.JTextArea areasquad1;
     private javax.swing.JButton createsquad;
     private javax.swing.JTextField elocation;
     private javax.swing.JTextField ename;
     private javax.swing.JTextField etype;
+    private javax.swing.JTextField indelim;
     private javax.swing.JTextField indmodS;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -608,6 +660,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
