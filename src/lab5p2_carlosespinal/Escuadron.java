@@ -56,14 +56,12 @@ public class Escuadron {
     }
 
     
-    public String toString1() {
+    @Override
+    public String toString() {
         return "Squad Name: " + SName + "\nLocalidad: " + Localidad + "\nTipo de Escuadron: " + HV;
     }
 
-    @Override
-    public String toString() {
-        return "Escuadron{" + "SName=" + SName + ", Localidad=" + Localidad + ", HV=" + HV + ", Integrantes=" + Integrantes + ", Leader=" + Leader + '}';
-    }
+    
     
     
     

@@ -2,34 +2,24 @@
 package lab5p2_carlosespinal;
 
 
-public class AccidenteRadioactivo extends Persona{
-    private int AgeAccident;
-    private String AccidentType;
+public class SuperHumano extends Persona{
+    private String SuperPower;
 
-    public AccidenteRadioactivo() {
+    public SuperHumano() {
         super();
     }
 
-    public AccidenteRadioactivo(int AgeAccident, String AccidentType, String Name, String Power, String Weakness, Escuadron Tag, int Fuerza, int AgilidadFisica, int AgilidadMental) {
+    public SuperHumano(String SuperPower, String Name, String Power, String Weakness, Escuadron Tag, int Fuerza, int AgilidadFisica, int AgilidadMental) {
         super(Name, Power, Weakness, Tag, Fuerza, AgilidadFisica, AgilidadMental);
-        this.AgeAccident = AgeAccident;
-        this.AccidentType = AccidentType;
+        this.SuperPower = SuperPower;
     }
 
-    public int getAgeAccident() {
-        return AgeAccident;
+    public String getSuperPower() {
+        return SuperPower;
     }
 
-    public void setAgeAccident(int AgeAccident) {
-        this.AgeAccident = AgeAccident;
-    }
-
-    public String getAccidentType() {
-        return AccidentType;
-    }
-
-    public void setAccidentType(String AccidentType) {
-        this.AccidentType = AccidentType;
+    public void setSuperPower(String SuperPower) {
+        this.SuperPower = SuperPower;
     }
 
     public String getName() {
@@ -90,8 +80,11 @@ public class AccidenteRadioactivo extends Persona{
 
     @Override
     public String toString() {
-        return super.toString() + "AgeAccident: " + AgeAccident + ", AccidentType: " + AccidentType;
+        return super.toString() + "SuperPower: " + SuperPower;
     }
+    
+    
+    
     
     
     
